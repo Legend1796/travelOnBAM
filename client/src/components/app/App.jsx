@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import "./App.css";
+import { Header } from "../header/header";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./app.css";
 
 function App() {
 	const [pageWidth, setPageWidth] = useState(
@@ -23,7 +25,11 @@ function App() {
 			payload: document.documentElement.scrollWidth,
 		});
 	};
-	return <div className="App"></div>;
+	return (
+		<div className="App">
+			<Header />
+		</div>
+	);
 }
 
 export default App;
