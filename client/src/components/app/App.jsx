@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { Header } from "../header/header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./app.css";
+import { Route, Routes } from "react-router-dom";
+import Main from "../pages/main/main";
 
 function App() {
 	const [pageWidth, setPageWidth] = useState(
@@ -28,6 +30,9 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
+			<Routes>
+				<Route path="/" Component={Main} />
+			</Routes>
 		</div>
 	);
 }
